@@ -12,22 +12,6 @@ from database_connect import get_restaurants
 #useful for parsing the post request from wsgi 
 from urllib import parse
 
-def ogIndex():
-    html = """
-    <html>
-    <head>
-    </head>
-    <body>
-    <h1>Welcome to the Website!</h1>
-    <section>
-    <h2>Description:</h2>
-    <p>This is your very own personal website hosted on the WWW.</p>
-    </section>
-    </body>
-    </html>
-    """
-
-
 ## first view: ask for the neighborhood. 
 # this is static HTML, which containts a form. 
 def index():
@@ -122,7 +106,7 @@ def neighborhood_restaurants(environ, start_response):
 
     # render index() for a GET request at the root 
     if request_method == 'GET' and request_path == "/":
-        return ogIndex()
+        return index()
 
     # render restaurants_list for a POST request at the root 
     elif request_method == 'POST' and request_path == "/":
