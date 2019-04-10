@@ -1,4 +1,4 @@
-#!/home/thomas_frey/pageHosting/venv/bin/python
+#!/Users/thomasfrey/Documents/pageHosting/venv/bin/python
 
 import sys
 import getopt
